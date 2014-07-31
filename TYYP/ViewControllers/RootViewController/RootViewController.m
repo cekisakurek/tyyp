@@ -43,7 +43,9 @@
     self.webView.scrollView.delegate = (id)_scrollProxy;
 
     _scrollProxy.delegate = self;
-    
+ 
+    UIBarButtonItem *item=[[UIBarButtonItem alloc]initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [self.navigationItem setLeftBarButtonItem:item];
     
 }
 
@@ -72,8 +74,14 @@
 -(void)requestAddressWithString:(NSString*)string{
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:string]]];
 }
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
+    return YES;
+}
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [self requestAddressWithString:textField.text];
+    UIBarButtonItem *item=[[UIBarButtonItem alloc]initWithTitle:@"Menu" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    [self.navigationItem setLeftBarButtonItem:item animated:YES];
     [textField resignFirstResponder];
     return YES;
 }

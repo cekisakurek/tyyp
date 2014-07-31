@@ -45,6 +45,7 @@
 		143E1741198A82BD0001BFA2 /* torrc in Resources */ = {isa = PBXBuildFile; fileRef = 143E1740198A82BD0001BFA2 /* torrc */; };
 		143E1743198A82CA0001BFA2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 143E1742198A82CA0001BFA2 /* libz.dylib */; };
 		143E1748198A82F50001BFA2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143E1747198A82F50001BFA2 /* RootViewController.m */; };
+		143E174D198A86560001BFA2 /* TYYPAddressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 143E174C198A86560001BFA2 /* TYYPAddressBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,6 +288,8 @@
 		143E1742198A82CA0001BFA2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		143E1746198A82F50001BFA2 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = ViewControllers/RootViewController/RootViewController.h; sourceTree = "<group>"; };
 		143E1747198A82F50001BFA2 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ViewControllers/RootViewController/RootViewController.m; sourceTree = "<group>"; };
+		143E174B198A86560001BFA2 /* TYYPAddressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYYPAddressBar.h; path = Controls/TYYPAddressBar/TYYPAddressBar.h; sourceTree = "<group>"; };
+		143E174C198A86560001BFA2 /* TYYPAddressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYYPAddressBar.m; path = Controls/TYYPAddressBar/TYYPAddressBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,6 +367,7 @@
 		143E1541198A80F10001BFA2 /* TYYP */ = {
 			isa = PBXGroup;
 			children = (
+				143E1749198A86300001BFA2 /* Controls */,
 				143E1744198A82D70001BFA2 /* ViewControllers */,
 				143E1728198A82B00001BFA2 /* Objects */,
 				143E154A198A80F10001BFA2 /* AppDelegate.h */,
@@ -748,6 +752,23 @@
 			name = RootViewController;
 			sourceTree = "<group>";
 		};
+		143E1749198A86300001BFA2 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				143E174A198A86370001BFA2 /* TYYPAddressBar */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		143E174A198A86370001BFA2 /* TYYPAddressBar */ = {
+			isa = PBXGroup;
+			children = (
+				143E174B198A86560001BFA2 /* TYYPAddressBar.h */,
+				143E174C198A86560001BFA2 /* TYYPAddressBar.m */,
+			);
+			name = TYYPAddressBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -849,6 +870,7 @@
 				143E173A198A82B00001BFA2 /* NSData+CocoaDevUsersAdditions.m in Sources */,
 				143E154F198A80F10001BFA2 /* TYYP.xcdatamodeld in Sources */,
 				143E164B198A81640001BFA2 /* tor_main.c in Sources */,
+				143E174D198A86560001BFA2 /* TYYPAddressBar.m in Sources */,
 				143E173D198A82B00001BFA2 /* ProxyURLProtocol.m in Sources */,
 				143E173E198A82B00001BFA2 /* TorManager.m in Sources */,
 				143E173C198A82B00001BFA2 /* CKHTTPConnection.m in Sources */,

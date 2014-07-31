@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface RootViewController : UIViewController<UITextFieldDelegate>
+#import "NJKScrollFullScreen.h"
+@interface RootViewController : UIViewController<UITextFieldDelegate,NJKScrollFullscreenDelegate>
 
 @end

@@ -46,6 +46,9 @@
 		143E1743198A82CA0001BFA2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 143E1742198A82CA0001BFA2 /* libz.dylib */; };
 		143E1748198A82F50001BFA2 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143E1747198A82F50001BFA2 /* RootViewController.m */; };
 		143E174D198A86560001BFA2 /* TYYPAddressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 143E174C198A86560001BFA2 /* TYYPAddressBar.m */; };
+		143E1751198A959F0001BFA2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 143E1750198A959F0001BFA2 /* MBProgressHUD.m */; };
+		143E1757198A96750001BFA2 /* NJKScrollFullScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 143E1754198A96750001BFA2 /* NJKScrollFullScreen.m */; };
+		143E1758198A96750001BFA2 /* UIViewController+NJKFullScreenSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 143E1756198A96750001BFA2 /* UIViewController+NJKFullScreenSupport.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,6 +293,12 @@
 		143E1747198A82F50001BFA2 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = ViewControllers/RootViewController/RootViewController.m; sourceTree = "<group>"; };
 		143E174B198A86560001BFA2 /* TYYPAddressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYYPAddressBar.h; path = Controls/TYYPAddressBar/TYYPAddressBar.h; sourceTree = "<group>"; };
 		143E174C198A86560001BFA2 /* TYYPAddressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYYPAddressBar.m; path = Controls/TYYPAddressBar/TYYPAddressBar.m; sourceTree = "<group>"; };
+		143E174F198A959F0001BFA2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		143E1750198A959F0001BFA2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		143E1753198A96750001BFA2 /* NJKScrollFullScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKScrollFullScreen.h; sourceTree = "<group>"; };
+		143E1754198A96750001BFA2 /* NJKScrollFullScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKScrollFullScreen.m; sourceTree = "<group>"; };
+		143E1755198A96750001BFA2 /* UIViewController+NJKFullScreenSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NJKFullScreenSupport.h"; sourceTree = "<group>"; };
+		143E1756198A96750001BFA2 /* UIViewController+NJKFullScreenSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NJKFullScreenSupport.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -755,6 +764,8 @@
 		143E1749198A86300001BFA2 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				143E1752198A96750001BFA2 /* NJKScrollFullScreen */,
+				143E174E198A959F0001BFA2 /* MBProgressHUD */,
 				143E174A198A86370001BFA2 /* TYYPAddressBar */,
 			);
 			name = Controls;
@@ -767,6 +778,26 @@
 				143E174C198A86560001BFA2 /* TYYPAddressBar.m */,
 			);
 			name = TYYPAddressBar;
+			sourceTree = "<group>";
+		};
+		143E174E198A959F0001BFA2 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				143E174F198A959F0001BFA2 /* MBProgressHUD.h */,
+				143E1750198A959F0001BFA2 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		143E1752198A96750001BFA2 /* NJKScrollFullScreen */ = {
+			isa = PBXGroup;
+			children = (
+				143E1753198A96750001BFA2 /* NJKScrollFullScreen.h */,
+				143E1754198A96750001BFA2 /* NJKScrollFullScreen.m */,
+				143E1755198A96750001BFA2 /* UIViewController+NJKFullScreenSupport.h */,
+				143E1756198A96750001BFA2 /* UIViewController+NJKFullScreenSupport.m */,
+			);
+			path = NJKScrollFullScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -867,6 +898,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				143E173B198A82B00001BFA2 /* NSData+Conversion.m in Sources */,
+				143E1757198A96750001BFA2 /* NJKScrollFullScreen.m in Sources */,
 				143E173A198A82B00001BFA2 /* NSData+CocoaDevUsersAdditions.m in Sources */,
 				143E154F198A80F10001BFA2 /* TYYP.xcdatamodeld in Sources */,
 				143E164B198A81640001BFA2 /* tor_main.c in Sources */,
@@ -875,9 +907,11 @@
 				143E173E198A82B00001BFA2 /* TorManager.m in Sources */,
 				143E173C198A82B00001BFA2 /* CKHTTPConnection.m in Sources */,
 				143E1748198A82F50001BFA2 /* RootViewController.m in Sources */,
+				143E1751198A959F0001BFA2 /* MBProgressHUD.m in Sources */,
 				143E154C198A80F10001BFA2 /* AppDelegate.m in Sources */,
 				143E1548198A80F10001BFA2 /* main.m in Sources */,
 				143E173F198A82B00001BFA2 /* ULINetSocket.m in Sources */,
+				143E1758198A96750001BFA2 /* UIViewController+NJKFullScreenSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

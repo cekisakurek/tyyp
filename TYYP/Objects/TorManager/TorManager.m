@@ -233,15 +233,16 @@
         
         if ([msgIn rangeOfString:@"BOOTSTRAP PROGRESS=100"].location != NSNotFound) {
             [self setState:TorConnectionStateRunning];
-            if (self.handler) {
-                self.handler(nil);
-            }
+            
             
 
         }
         
         if (![self isHeartBeating]) {
             if ([msgIn rangeOfString:@"BOOTSTRAP PROGRESS=100"].location != NSNotFound) {
+                if (self.handler) {
+                    self.handler(nil);
+                }
                 // This is our first go-around (haven't loaded page into webView yet)
                 // but we are now at 100%, so go ahead.
                 [self setHeartBeat:YES];

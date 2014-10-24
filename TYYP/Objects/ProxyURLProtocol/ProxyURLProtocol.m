@@ -176,7 +176,7 @@
 - (void)HTTPConnection:(CKHTTPConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response {
     isGzippedResponse = NO;
     #ifdef DEBUG
-        NSLog(@"[ProxyURLProtocol] Got response %d: content-type: %@", [response statusCode], [response MIMEType]);
+        NSLog(@"[ProxyURLProtocol] Got response %ld: content-type: %@", (long)[response statusCode], [response MIMEType]);
     #endif
     if( _data != nil ) {
         _data = nil;
@@ -341,7 +341,7 @@
     if ((response.statusCode == 301)||(response.statusCode == 302)||(response.statusCode == 307)) {
         NSString *newURL = [[response allHeaderFields] objectForKey:@"Location"];
         #ifdef DEBUG
-            NSLog(@"[ProxyURLProtocol] Got %d redirect from %@ to %@", response.statusCode, _request.URL, newURL);
+            NSLog(@"[ProxyURLProtocol] Got %ld redirect from %@ to %@", (long)response.statusCode, _request.URL, newURL);
         #endif
 
         NSMutableURLRequest *newRequest = [_request mutableCopy];
